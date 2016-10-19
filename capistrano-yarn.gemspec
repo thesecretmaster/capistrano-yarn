@@ -3,16 +3,16 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
-  spec.name          = 'capistrano-npm'
-  spec.version       = '1.0.2'
-  spec.authors       = ['Scott Walkinshaw']
-  spec.email         = ['scott.walkinshaw@gmail.com']
-  spec.description   = %q{npm support for Capistrano 3.x}
-  spec.summary       = %q{npm support for Capistrano 3.x}
-  spec.homepage      = 'https://github.com/capistrano/npm'
+  spec.name          = 'capistrano-yarn'
+  spec.version       = '2.0.0'
+  spec.authors       = ['Jesus Arnaiz']
+  spec.email         = ['j.arnaiz@gmail.com']
+  spec.description   = 'yarn support for Capistrano 3.x'
+  spec.summary       = 'yarn support for Capistrano 3.x'
+  spec.homepage      = 'https://github.com/j-arnaiz/capistrano-yarn'
   spec.license       = 'MIT'
 
-  spec.files         = `git ls-files`.split($/)
+  spec.files         = `git ls-files`.split($RS)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
