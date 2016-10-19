@@ -7,7 +7,7 @@ namespace :yarn do
         You can override any of these defaults by setting the variables shown below.
 
           set :yarn_target_path, nil
-          set :yarn_flags, '--production --silent --no-spin'
+          set :yarn_flags, '--production'
           set :yarn_roles, :all
           set :yarn_env_variables, {}
           set :yarn_bin, :yarn
@@ -68,8 +68,8 @@ end
 
 namespace :load do
   task :defaults do
-    set :yarn_flags, %w(--production --silent --no-progress)
-    set :yarn_prune_flags, '--production'
+    set :yarn_flags, %w(--production)
+    set :yarn_prune_flags, ''
     set :yarn_roles, :all
     set :yarn_bin, :yarn
   end
