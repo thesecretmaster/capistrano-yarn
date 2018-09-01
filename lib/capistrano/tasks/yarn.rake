@@ -68,7 +68,7 @@ end
 
 namespace :load do
   task :defaults do
-    set :yarn_flags, %w(--production)
+    set :yarn_flags, %w(--production --global-folder=node_modules)
     set :yarn_prune_flags, ''
     set :yarn_roles, :all
     set :yarn_bin, :yarn
