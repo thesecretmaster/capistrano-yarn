@@ -16,7 +16,7 @@ namespace :yarn do
     on roles fetch(:yarn_roles) do
       within fetch(:yarn_target_path, release_path) do
         with fetch(:yarn_env_variables, {}) do
-          execute fetch(:yarn_bin), 'install', fetch(:yarn_flags)
+          execute 'sudo', fetch(:yarn_bin), 'install', fetch(:yarn_flags)
         end
       end
     end
